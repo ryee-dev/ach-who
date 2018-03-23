@@ -2,9 +2,12 @@
   "name": "ach-who",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode development",
+    "start": "webpack --mode development; webpack-dev-server --open --mode development",
+    "lint": "eslint --fix src/*.js",
+    "test": "karma start karma.conf.js --mode development"
   },
   "keywords": [],
   "author": "",
