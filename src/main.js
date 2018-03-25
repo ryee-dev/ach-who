@@ -7,20 +7,19 @@ import {
 
 const showDocs = function showDocs(response) {
   let docArray = [];
-  if (response.data.length > 0) {
-    $.each(response.data, function(i) {
-      docArray.push(response.data[i]);
+  if (docArray.length > 0) {
+    $.each(docArray, function(i) {
+      docArray.push(docArray[i]);
     });
   } else {
     $('#resultsFail').text('Sorry, no doctors in that area.')
   }
 
   for (let i = 0; i < docArray.length; i++) {
-    let doctor_fullname = response.data[i].profile.first_name + " " + response.data[i].profile.last_name;
-    let doctor_bio = response.data[i].profile.bio;
+    let doctor_fullname = docArray[i].profile.first_name + " " + docArray[i].profile.last_name;
+    let doctor_bio = docArray[i].profile.bio;
     $('#resultsSuccess').append(' ' + '<li>' + '<div class="card">' +
     '<div class="card-body">' + '<div class="card-title">' + '<h3>' + doctor_fullname + '</h3>' + '</div>' + '<hr>' + '<p class="card-text">' + doctor_bio + '</p>' + '</div>' + '</div>' + '</li>');
-    }
   }
 };
 
