@@ -5,35 +5,85 @@
   </head>
   <body>
     <div class='container'>
-      <h1 class="display-1">Ach-Who</h1>
-        <form id="search-form">
-          <div class="form-group">
-            <label for="keyword-search">Keyword: </label>
-            <input type="text" class="form-control" id="keyword-search" placeholder="enter keyword here">
-          </div>
-          <div class="form-group">
-            <label for="sortBy">Sort By: </label>
-            <select id="sortBy" class="form-control">
-              <option value="nil">-select-</option>
-              <option value="full-name-asc">Full Name Ascending</option>
-              <option value="full-name-desc">Full Name Descending</option>
-              <option value="last-name-asc">Last Name Ascending</option>
-              <option value="last-name-desc">Last Name Descending</option>
-              <option value="first-name-asc">First Name Ascending</option>
-              <option value="first-name-desc">First Name Descending</option>
-              <option value="best-match-asc">Best Match Descending</option>
-              <option value="best-match-desc">Name Descending</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-info">Search</button>
-        </form>
+      <div class="well">
+        <h1 class="display-3">Ach-Who</h1>
+        <hr class="my-1">
+      </div>
 
-        <div class="showResults">
-          <h2><span id="resultsFail"></span></h2>
-          <ol>
-            <span id="resultsSuccess"></span>
-          </ol>
+
+      <div id="search-by">
+        <p class="lead">Find Medical Professionals Near <strong>You</strong>:</p>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary" id="condition-butt">Condition</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-secondary" id="doctor-butt">Name/Specialty</button>
+          </div>
         </div>
+      </div>
+
+      <hr>
+
+      <form id="condition-form">
+        <div class="form-group">
+          <label for="condition-name">Condition Name: </label>
+          <input type="text" class="form-control" id="condition-name" placeholder="Please enter name of condition">
+          <br>
+          <button type="submit" class="btn btn-info" id="submit-butt">Search</button>
+          <br><hr><br>
+          <button type="button" class="btn btn-danger" id="home-butt1">Back</button>
+        </div>
+      </form>
+
+      <form id="doctor-form">
+        <div class="form-group">
+          <label for="first-name">First Name: </label>
+          <input type="text" class="form-control" id="first_name" placeholder="Please enter doctor's first name">
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name: </label>
+          <input type="text" class="form-control" id="last_name" placeholder="Please enter doctor's last name">
+        </div>
+
+        <div class="form-group">
+          <label for="specialty">Specialty: </label>
+          <input type="text" class="form-control" id="specialty" placeholder="Please enter doctor's specialty">
+        </div>
+
+        <div class="form-group">
+          <label for="keyword-search">Keyword: </label>
+          <input type="text" class="form-control" id="keyword-search" placeholder="enter keyword here">
+        </div>
+        <div class="form-group">
+          <label for="sortBy">Sort By: </label>
+          <select id="sortBy" class="form-control">
+            <option value="">-select-</option>
+            <option value="full-name-asc">Full Name Ascending</option>
+            <option value="full-name-desc">Full Name Descending</option>
+            <option value="last-name-asc">Last Name Ascending</option>
+            <option value="last-name-desc">Last Name Descending</option>
+            <option value="first-name-asc">First Name Ascending</option>
+            <option value="first-name-desc">First Name Descending</option>
+            <option value="best-match-asc">Best Match Descending</option>
+            <option value="best-match-desc">Name Descending</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-info" id="submit-butt">Search</button>
+
+        <br><hr><br>
+
+        <button type="button" class="btn btn-danger" id="home-butt2">Back</button>
+      </form>
+
+      <div class="showResults">
+        <h2><span id="resultsFail"></span></h2>
+        <ol>
+          <span id="resultsSuccess"></span>
+        </ol>
+      </div>
 
     </div>
   </body>

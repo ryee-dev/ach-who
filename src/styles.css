@@ -1,3 +1,7 @@
+h1, .lead {
+  text-align: center;
+}
+
 .showResults {
   display: none;
 }
@@ -5,3 +9,49 @@
 .card-title {
   font-weight: bold;
 }
+
+/* Buttons */
+
+#condition-butt {
+  position: relative;
+  display: block;
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+#doctor-butt {
+  position: relative;
+  display: block;
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+#home-butt1, #home-butt2, #submit-butt {
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 10%;
+  margin: auto 45% auto 45%;
+}
+
+/* END Buttons */
+
+/* Forms */
+
+#search-by {
+  margin: 15% 15% 15% 15%;
+}
+
+#doctor-form {
+  display: none;
+}
+
+#condition-form {
+  display: none;
+}
+
+/* END Forms */
