@@ -7,16 +7,10 @@ export class AchWho {
   }
 
   findDrs(query, sort, showDocs) {
-
-    const apiKey = process.env.exports.apiKey;
-
-    console.log(apiKey);
-
-    $.get(`https://api.betterdoctor.com/2016-03-01/doctors?query=${this.query}&sort=${this.sort}&skip=0&limit=10&user_key=${apiKey}`).then(function(response) {
+    $.get(`https://api.betterdoctor.com/2016-03-01/doctors?query=${this.query}&sort=${this.sort}&skip=0&limit=10&user_key=` + process.env.exports.apiKey).then(function(response) {
         showDocs(response);
-      })
-      .fail(function(error) {
-        $('#resultsFail').text('Error, try again later.')
-      });
+      }).fail(function(error) {
+        $('#resultsFail').text('Error, please try again later.')
+    });
   }
 }
