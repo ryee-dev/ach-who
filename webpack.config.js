@@ -23,7 +23,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'Ach Who',
+      title: 'Ach-Who',
       template: './src/index.html',
       inject: 'body'
     })

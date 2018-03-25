@@ -1,5 +1,6 @@
 import './styles.css';
 import $ from 'jquery';
+import 'materialize-css/dist/css/materialize.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   AchWho
@@ -25,6 +26,14 @@ const showDocs = function showDocs(response) {
 };
 
 $(document).ready(function() {
+
+  let parameters = {
+    'first': '',
+    'last': '',
+    'specialty': '',
+    'query': '',
+    'sort': ''
+  };
 
   $("#condition-butt").click(function(event) {
     event.preventDefault();
@@ -53,22 +62,16 @@ $(document).ready(function() {
   });
 
   $("#doctor-form").submit(function(event) {
-    event.preventDefault();
-    let parameters = {
-      'first': '',
-      'last': '',
-      'specialty': '',
-      'query': '',
-      'sort': ''
-    }
+    event.preventDefault()
 
-    let first = $("#first-name").val();
-    let last = $("#last-name").val();
-    let specialty = $("#specialty").val();
-    let query = $("#keyword-search").val();
-    let sort = $("#sortBy").val();
-    let docRequest = new AchWho(query, sort);
-    docRequest.findDrs(query, sort, showDocs);
+    parameters.first = $("#first-name").val();
+    parameters.last = $("#last-name").val();
+    parameters.specialty = $("#specialty").val();
+    parameters.query = $("#keyword-search").val();
+    parameters.sort = $("#sortBy").val();
+    let docRequest = new AchWho(parameters, showDocs);
+    docRequest.findDrs();
+
     $(".showResults").show();
   });
 });
