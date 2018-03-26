@@ -2,9 +2,7 @@ import './styles.css';
 import $ from 'jquery';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-  AchWho
-} from './ach-who.js';
+import { AchWho } from './ach-who.js';
 
 const showDocs = function showDocs(response) {
   let docArray = [];
@@ -32,7 +30,8 @@ $(document).ready(function() {
     'last': '',
     'specialty': '',
     'query': '',
-    'sort': ''
+    'sort': '',
+    'state': ''
   };
 
   $("#condition-butt").click(function(event) {
@@ -63,15 +62,14 @@ $(document).ready(function() {
 
   $("#doctor-form").submit(function(event) {
     event.preventDefault()
-
     parameters.first = $("#first-name").val();
     parameters.last = $("#last-name").val();
     parameters.specialty = $("#specialty").val();
     parameters.query = $("#keyword-search").val();
+    parameters.state = $("#state").val();
     parameters.sort = $("#sortBy").val();
     let docRequest = new AchWho(parameters, showDocs);
-    docRequest.findDrs();
-
+    docRequest.findDrs(showDocs);
     $(".showResults").show();
   });
 });

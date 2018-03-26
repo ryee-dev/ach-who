@@ -18,7 +18,7 @@ h1, .lead {
   height: 200px;
   width: 100%;
   margin: 0 auto;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 #doctor-butt {
@@ -27,15 +27,23 @@ h1, .lead {
   height: 200px;
   width: 100%;
   margin: 0 auto;
-  font-size: 30px;
+  font-size: 24px;
 }
 
-#home-butt1, #home-butt2, #submit-butt {
+#submit-butt {
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 15%;
+  margin: 0 auto;
+}
+
+#home-butt1, #home-butt2 {
   display: block;
   position: relative;
   height: 50px;
   width: 10%;
-  margin: auto 45% auto 45%;
+  margin: 0 auto;
 }
 
 /* END Buttons */
