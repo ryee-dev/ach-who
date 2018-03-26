@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { showDocs } from './display-doctors.js'
 
 export class AchWho {
   constructor(parameters, showDocs) {
