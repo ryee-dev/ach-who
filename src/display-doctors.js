@@ -7,7 +7,7 @@ export function showDocs(response) {
       docArray.push(response.data[i]);
     });
   } else {
-    $('#resultsFail').text('<p>' + 'Sorry, no doctors in that area.' + '</p>');
+    $('#resultsFail').text('Sorry, no doctors in that area.');
   }
 
   for (let i = 0; i < docArray.length; i++) {

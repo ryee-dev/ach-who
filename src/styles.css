@@ -30,7 +30,7 @@ h1, .lead {
   font-size: 24px;
 }
 
-#submit-butt {
+#submit-butt1, #submit-butt2 {
   display: block;
   position: relative;
   height: 50px;
@@ -51,15 +51,17 @@ h1, .lead {
 /* Forms */
 
 #search-by {
-  margin: 15% 15% 15% 15%;
+  margin-top: 45%;
 }
 
 #doctor-form {
   display: none;
+  margin-top: 30%;
 }
 
 #condition-form {
   display: none;
+  margin-top: 50%;
 }
 
 /* END Forms */
