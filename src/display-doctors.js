@@ -6,7 +6,7 @@ export function showDocs(response) {
     $.each(response.data, function(i) {
       docArray.push(response.data[i]);
     });
-    console.log(docArray);
+    // console.log(docArray);
   } else {
     $('#resultsFail').text('Sorry, no doctors in that area.');
   }

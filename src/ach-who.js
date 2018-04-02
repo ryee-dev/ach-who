@@ -21,8 +21,10 @@ export class AchWho {
     });
   }
 
-  findbyCondition() {
-    $.get(`https://api.betterdoctor.com/2016-03-01/doctors?query=${this.condition}&user_key=` + process.env.exports.apiKey).then(function(response) {
+  findbyCondition(condition) {
+    console.log(condition);
+    $.get(`https://api.betterdoctor.com/2016-03-01/doctors?query=` + condition + `&user_key=` + process.env.exports.apiKey).then(function(response) {
+      console.log(response.data[0]);
       showDocs(response);
     }).fail(function() {
       $('#resultsFail').text('Error, please try again later.');
